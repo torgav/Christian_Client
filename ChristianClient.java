@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 
 public class ChristianClient {
-    public class Client {
         public static void main(String[] args) {
             String hostName = "localhost"; 
             int portNumber = 4446;
@@ -15,9 +14,9 @@ public class ChristianClient {
                 Scanner scanner = new Scanner(System.in)
             ) {
                 String userInput;
-                System.out.println("\n\nConnected to the server. Type your math expressions (e.g., '1 + 2') to send.");
+                System.out.println("\n\nConnected to the server. Write in this format '1 + 1");
                 while (true) {
-                    System.out.print("Enter expression (or 'quit' to exit): ");
+                    System.out.print("Enter quit to escape");
                     userInput = scanner.nextLine(); 
     
                     if ("quit".equalsIgnoreCase(userInput)) { 
@@ -34,6 +33,5 @@ public class ChristianClient {
                 System.err.println("Couldn't get I/O for the connection to " + hostName);
                 System.exit(1); 
             }
-        }
     }
 }
